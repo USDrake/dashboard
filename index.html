@@ -4,144 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Independent Vaults - Parallel Clearing & Sovereign Custody</title>
-    <!-- Tailwind CSS for authentic corporate bank styling -->
-    <script src="https://tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-slate-800 font-sans antialiased">
+<body style="margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; bg-color: #f8fafc; color: #334155; background-color: #f8fafc; -webkit-font-smoothing: antialiased;">
 
-    <!-- Top Compliance Notice Alert Banner -->
-    <div class="bg-amber-500 text-slate-950 text-xs font-semibold py-2 px-4 text-center border-b border-amber-600 shadow-sm">
-        🛡️ <span class="uppercase tracking-wider font-bold">Compliance Standard:</span> All digital transaction certificates are legally verified as 100% full-reserve physical bailments. Fractional ledger execution is strictly prohibited.
+    <!-- Top Compliance Notice Alert Banner (Modeled after TCB Alert Line) -->
+    <div style="background-color: #f59e0b; color: #0f172a; font-size: 13px; font-weight: 600; padding: 10px 16px; text-align: center; border-bottom: 1px solid #d97706; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); letter-spacing: 0.5px;">
+        🛡️ <span style="text-transform: uppercase; font-weight: 800;">Compliance Standard:</span> All digital transaction certificates are legally verified as 100% full-reserve physical bailments. Fractional ledger execution is strictly prohibited.
     </div>
 
     <!-- Main Institutional Navigation Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <header style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0;浏览 z-index: 50; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 80px; display: flex; align-items: center; justify-content: space-between;">
             
             
-            <div class="flex items-center space-x-3">
-                <span class="text-3xl text-blue-900">🏛️</span>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 32px; color: #1e3a8a;">🏛️</span>
                 <div>
-                    <span class="block text-2xl font-black tracking-tight text-blue-900">INDEPENDENT VAULTS</span>
-                    <span class="block text-[10px] font-bold text-teal-600 uppercase tracking-widest -mt-1">A Modern Reform of Our Banking System</span>
+                    <span style="display: block; font-size: 24px; font-weight: 900; tracking-style: tight; color: #1e3a8a; letter-spacing: -0.5px;">INDEPENDENT VAULTS</span>
+                    <span style="display: block; font-size: 10px; font-weight: 700; color: #0d9488; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 2px;">A Modern Reform of Our Banking System</span>
                 </div>
             </div>
 
             <!-- Navigation Links with Dropdown Menu Option -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-bold text-blue-900">
-                <a href="#overview" class="hover:text-teal-600 transition">System Overview</a>
-                <a href="#infrastructure" class="hover:text-teal-600 transition">Infrastructure</a>
+            <nav style="display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 700;">
+                <a href="#overview" style="color: #1e3a8a; text-decoration: none;">System Overview</a>
+                <a href="#infrastructure" style="color: #1e3a8a; text-decoration: none;">Infrastructure</a>
                 
-                <!-- Interactive Document Repository Dropdown Menu Option -->
-                <div class="relative inline-block text-left">
-                    <button id="dropdownButton" onclick="toggleDropdown()" class="flex items-center gap-1 hover:text-teal-600 transition focus:outline-none bg-blue-50/50 px-3 py-2 rounded-md border border-blue-100">
+                <!-- Interactive Technical Briefs Dropdown Menu Option -->
+                <div style="position: relative; display: inline-block;">
+                    <button id="dropdownButton" onclick="toggleDropdown()" style="display: flex; align-items: center; gap: 6px; color: #1e3a8a; font-weight: 700; font-size: 14px; background-color: #eff6ff; border: 1px solid #dbeafe; padding: 10px 16px; rounded-style: border-radius; border-radius: 6px; cursor: pointer; outline: none;">
                         📁 Technical Briefs 
-                        <svg class="w-4 h-4 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <span style="font-size: 10px; margin-left: 2px;">▼</span>
                     </button>
 
-                    <!-- Dropdown Menu Panel -->
-                    <div id="dropdownMenu" class="hidden absolute right-0 mt-2 w-96 rounded-xl shadow-xl bg-white border border-gray-200 ring-1 ring-black ring-opacity-5 z-50 divide-y divide-gray-100">
-                        <div class="py-2">
-                            <span class="block px-4 py-1 text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Technical Specifications</span>
-                            <a href="Decentralized_Clearinghouse_and_SPDI_Compliance_Architecture.pdf" target="_blank" class="group flex items-start px-4 py-2 hover:bg-blue-50 transition">
-                                <span class="text-xl mr-3 mt-0.5">📄</span>
+                    <!-- Dropdown Menu Panel (Managed cleanly via Javascript toggle style) -->
+                    <div id="dropdownMenu" style="display: none; position: absolute; right: 0; mt-2: 8px; margin-top: 8px; width: 360px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); background-color: #ffffff; border: 1px solid #e2e8f0; z-index: 100;">
+                        
+                        <div style="padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+                            <span style="display: block; padding: 4px 16px; font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Technical Specifications</span>
+                            
+                            <a href="Decentralized_Clearinghouse_and_SPDI_Compliance_Architecture.pdf" target="_blank" style="display: flex; align-items: flex-start; padding: 10px 16px; text-decoration: none; border-bottom: 1px solid #f8fafc;">
+                                <span style="font-size: 20px; margin-right: 12px;">📄</span>
                                 <div>
-                                    <div class="text-sm font-bold text-blue-900 group-hover:text-teal-600">SPDI Compliance Architecture</div>
-                                    <p class="text-xs text-slate-500">100% full-reserve interbank settlement plumbing rules.</p>
+                                    <div style="font-size: 14px; font-weight: 700; color: #1e3a8a;">SPDI Compliance Architecture</div>
+                                    <div style="font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px;">100% full-reserve clearinghouse mechanics.</div>
                                 </div>
                             </a>
-                            <a href="Sovereign_Vault_Logistics_and_Physical_Auditing_Protocol.pdf" target="_blank" class="group flex items-start px-4 py-2 hover:bg-blue-50 transition">
-                                <span class="text-xl mr-3 mt-0.5">⚙️</span>
+                            
+                            <a href="Sovereign_Vault_Logistics_and_Physical_Auditing_Protocol.pdf" target="_blank" style="display: flex; align-items: flex-start; padding: 10px 16px; text-decoration: none;">
+                                <span style="font-size: 20px; margin-right: 12px;">⚙️</span>
                                 <div>
-                                    <div class="text-sm font-bold text-blue-900 group-hover:text-teal-600">Vault Logistics & Auditing Protocol</div>
-                                    <p class="text-xs text-slate-500">Real-time scale sensors and custody frameworks.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="py-2">
-                            <span class="block px-4 py-1 text-[10px] font-extrabold text-slate-400 uppercase tracking-wider">Defensive Strategy & Legislation</span>
-                            <a href="Institutional_Realignment_and_Security_Framework.pdf" target="_blank" class="group flex items-start px-4 py-2 hover:bg-blue-50 transition">
-                                <span class="text-xl mr-3 mt-0.5">🛡️</span>
-                                <div>
-                                    <div class="text-sm font-bold text-blue-900 group-hover:text-teal-600">Institutional Realignment Blueprint</div>
-                                    <p class="text-xs text-slate-500">Co-opting legacy banking revenue mitigation tracks.</p>
-                                </div>
-                            </a>
-                            <a href="Legal_and_Legislative_Templates_Suite.pdf" target="_blank" class="group flex items-start px-4 py-2 hover:bg-blue-50 transition">
-                                <span class="text-xl mr-3 mt-0.5">⚖️</span>
-                                <div>
-                                    <div class="text-sm font-bold text-blue-900 group-hover:text-teal-600">Interstate Compact & Model Bills</div>
-                                    <p class="text-xs text-slate-500">Statutory templates built under Article I, Section 10.</p>
+                                    <div style="font-size: 14px; font-weight: 700; color: #1e3a8a;">Vault Logistics & Auditing Protocol</div>
+                                    <div style="font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px;">Real-time continuous sensor frameworks.</div>
                                 </div>
                             </a>
                         </div>
+
+                        <div style="padding: 12px 0;">
+                            <span style="display: block; padding: 4px 16px; font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Defensive Strategy & Legislation</span>
+                            
+                            <a href="Institutional_Realignment_and_Security_Framework.pdf" target="_blank" style="display: flex; align-items: flex-start; padding: 10px 16px; text-decoration: none; border-bottom: 1px solid #f8fafc;">
+                                <span style="font-size: 20px; margin-right: 12px;">🛡️</span>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #1e3a8a;">Institutional Realignment Blueprint</div>
+                                    <div style="font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px;">Co-opting legacy banking revenue models.</div>
+                                </div>
+                            </a>
+                            
+                            <a href="Legal_and_Legislative_Templates_Suite.pdf" target="_blank" style="display: flex; align-items: flex-start; padding: 10px 16px; text-decoration: none;">
+                                <span style="font-size: 20px; margin-right: 12px;">⚖️</span>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #1e3a8a;">Interstate Compact & Model Bills</div>
+                                    <div style="font-size: 12px; color: #64748b; font-weight: 400; margin-top: 2px;">Statutory templates under Article I, Sec. 10.</div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </nav>
 
             <!-- Network Status Indicator -->
-            <div class="flex items-center">
-                <span class="px-3 py-1 text-xs font-bold bg-teal-50 text-teal-700 border border-teal-200 rounded-md flex items-center gap-1.5 shadow-sm">
-                    <span class="w-2 h-2 bg-teal-500 rounded-full animate-pulse"></span>
+            <div style="display: flex; align-items: center;">
+                <span style="padding: 6px 12px; font-size: 12px; font-weight: 700; background-color: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; border-radius: 6px; display: flex; align-items: center; gap: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
+                    <span style="width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; display: inline-block;"></span>
                     SYSTEM VERIFIED
                 </span>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section with Local AVIF Image Integration -->
-    <section class="relative bg-blue-950 text-white overflow-hidden shadow-inner">
-        <div class="absolute inset-0 opacity-20 mix-blend-overlay">
-            <img src="hero-display.avif" 
-                 onerror="this.src='https://unsplash.com'" 
-                 alt="Data Core Grid Layout" 
-                 class="w-full h-full object-cover">
-        </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative z-10">
-            <div class="max-w-3xl space-y-4">
-                <p class="text-teal-400 font-bold tracking-widest text-xs uppercase">The Future of Sound Money Architecture</p>
-                <h1 class="text-4xl font-black tracking-tight sm:text-6xl text-white">
-                    Modern Reform. Absolute Safety.
-                </h1>
-                <p class="text-base sm:text-lg text-blue-100 leading-relaxed max-w-2xl">
-                    Independent Vaults introduces a parallel state-level clearinghouse infrastructure built on absolute full-reserve principles. We legally guarantee safety through transactional certificates that protect your assets.
-                </p>
+    <!-- Hero Section (Classic Corporate Banking Layout with Fallback Backup Integration) -->
+    <section style="position: relative; background-color: #1e3a8a; color: #ffffff; padding: 80px 20px; overflow: hidden; background-image: linear-gradient(to right, #172554, #1e3a8a);">
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
+            <div style="max-width: 700px;">
+                <p style="color: #2dd4bf; font-weight: 700; letter-spacing: 1.5px; font-size: 12px; text-transform: uppercase; margin: 0 0 12px 0;">The Future of Sound Money Architecture</p>
+                <h1 style="font-size: 48px; font-weight: 900; margin: 0 0 16px 0; tracking: tight; line-height: 1.1;">Modern Reform. Absolute Safety.</h1>
+                <p style="font-size: 18px; color: #dbeafe; line-height: 1.6; margin: 0;">Independent Vaults introduces a parallel state-level clearinghouse infrastructure built on absolute full-reserve principles. We legally guarantee safety through transactional certificates that protect your assets.</p>
             </div>
         </div>
+        <!-- Background decorative geometric cover image -->
+        <img src="hero-display.avif" onerror="this.src='https://unsplash.com'" alt="Display asset grid" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.12; mix-blend-mode: overlay; pointer-events: none;">
     </section>
 
     <!-- Main Content Presentation -->
-    <main id="overview" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+    <main id="overview" style="max-w: 1200px; max-width: 1200px; margin: 0 auto; padding: 60px 20px; box-sizing: border-box;">
         
-        <!-- Action Cards Section -->
-        <div class="space-y-6">
-            <h2 class="text-2xl font-black text-blue-900 tracking-tight border-b pb-3 border-gray-200">
-                Core Operational Pillars
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-black text-blue-900 mb-2">100% Full-Reserve Model</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">By converting traditional deposits into absolute legal bailments, your digital tokens remain cryptographic proof of direct commodity vault ownership at all times.</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-black text-blue-900 mb-2">Parallel State Settlement</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Our decentralized clearinghouse allows transactions to clear peer-to-peer across participating state nodes with zero dependence on federal pipelines.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-black text-blue-900 mb-2">Institutional Interoperability</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Traditional financial gateway actors gain secure, compliant transaction-fee revenue channels via native API connectivity routes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Infrastructure Architecture Breakdown Section -->
-        <div id="infrastructure" class="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-4">
+        <!-- Action Cards Section (Modeled after TCB Action Blocks) -->
+        <div style="margin-bottom: 60px;">
+            <h2 style="font-size: 24px; font-weight: 900; color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-top: 0; margin-bottom: 32px;">Core Operational Pillars</h2>
+            
+            <div style="display: grid; grid-template-cols: 1fr; display: flex; flex-wrap: wrap; gap: 24px;">
+                
